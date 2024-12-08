@@ -1,0 +1,186 @@
+/*
+Theme Name: KiwiSpace Adventures
+Theme URI: http://yourdomain.com/
+Author: Your Name
+Author URI: http://yourdomain.com/
+Description: A custom WordPress theme designed for KiwiSpace, focusing on space exploration, science, and community discussions.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kiwispace-theme
+Tags: one-column, custom-background, custom-colors, custom-logo, custom-menu, featured-images, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url('assets/fonts/GothicA1-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.kiwispace-logo a {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700; /* Black font weight */
+    font-size: 1.5rem; /* Larger size for emphasis */
+    color: black;
+    text-decoration: none;
+    margin-right: 20px; /* Space from other items */
+}
+
+
+
+
+
+
+
+/* --------------------Navigation bar styles-------------------------------- */
+nav {
+    font-family: 'Gothic A1', sans-serif;
+    background-color: white;
+    width: 100%; /* Full width */
+    height: 5vh; /* Approx. 5% of the screen height */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    
+}
+
+/* Menu styles */
+/* Navigation Bar */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    
+    margin: 0;
+}
+
+/* Individual menu item */
+.nav-menu li {
+    position: relative;
+}
+
+/* Default Image (off.png) */
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 35px; /* Space for the icon */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Active menu item (on.png) */
+.nav-menu li.current-menu-item a {
+    background-image: url('/assets/Images/On.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 35px;
+}
+
+/* For each menu option image (off.png) */
+.nav-menu li a.blog-link {
+    background-image: url('/assets/Images/Off.png');  /* Default off image for Blog */
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.nav-menu li a.store-link {
+    background-image: url('/assets/Images/Off.png');  /* Default off image for Store */
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.nav-menu li a.meet-link {
+    background-image: url('/assets/Images/Off.png');  /* Default off image for Meet */
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Adjust image size to avoid distortion */
+.nav-menu li a img {
+    width: 20px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect */
+.nav-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* --------------------------------page styles--------------------------------------- */
+/* General theme container */
+.theme-container {
+    background-color: #f0f0f0; /* Light grey background */
+    min-height: 100vh; /* Full viewport height */
+    padding-top: 20px; /* Space for the navigation bar and gap */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    
+}
+
+/* Content area */
+.content-area {
+    background-color: #ffffff; /* White background */
+    width: 66%; /* Fill 66% of the horizontal area */
+    padding: 20px; /* Padding for the content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    border-radius: 8px; /* Optional rounded corners */
+    font-family: 'Gothic A1', sans-serif; 
+    padding-top: 20px;
+}
+
+/* Entry content styles */
+.entry-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center; /* Centered title */
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300; /* Black font weight */
+    font-size: 2rem;
+}
+
+.entry-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+img {
+    max-width: 100%; /* Ensure images fit within the content area */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        width: 90%; /* Reduce width for smaller screens */
+    }
+}
+
+
+
+
+
+
